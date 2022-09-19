@@ -32,6 +32,6 @@ app.use("/api", authRoutes.routes);
 app.use("/api", productRoutes.routes);
 app.use(error);
 
-app.listen(environements.port, () =>
+app.listen(8080, () =>
   winston.info("App listening on url: http://localhost:" + environements.port)
 );
