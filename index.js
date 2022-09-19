@@ -16,6 +16,8 @@ require("./startup/db")();
 require("./startup/logging")();
 require("./startup/validation")();
 
+var port = 8000
+
 
 app.use(express.json());
 app.use(
@@ -32,6 +34,6 @@ app.use("/api", authRoutes.routes);
 app.use("/api", productRoutes.routes);
 app.use(error);
 
-app.listen(8000, () =>
-  winston.info("App listening on url: http://localhost:" + environements.port)
+app.listen(port =>
+  winston.info("App listening on url: http://localhost:" + port
 );
