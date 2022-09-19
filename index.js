@@ -18,12 +18,12 @@ require("./startup/validation")();
 
 
 app.use(express.json());
-app.use(
-  cors({
-    Credentials: true,
-    origin: ["http://localhost:3000"],
-  })
-);
+// app.use(
+//   cors({
+//     Credentials: true,
+//     origin: ["http://localhost:3000"],
+//   })
+// );
 app.use(bodyParser.json());
 
 app.use("/api", userRoutes.routes);
